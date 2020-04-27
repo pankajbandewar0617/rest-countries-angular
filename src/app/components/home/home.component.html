@@ -1,0 +1,16 @@
+<p>home works properly!</p>
+
+
+<div *ngFor="let country of allData">
+    <a [routerLink]="['/name', country.alpha3Code]" routerLinkActive="router-link-active">
+        <div>
+            <img src={{country.flag}} height="120px" alt="flag missing" />
+            <div class="country-name">{{country.name}}</div>
+            <div class="country-detail">
+                <p>Population: {{country.population}}</p>
+                <p>Region: {{country.region}}</p>
+                <p>Capital: {{country.capital}}</p>
+            </div>
+        </div>
+    </a>
+</div>

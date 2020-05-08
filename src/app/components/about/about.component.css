@@ -1,0 +1,45 @@
+.detail-page {
+  padding: 0px 50px;
+  background-color: hsl(0, 0%, 90%);
+  height: 540px;
+}
+.back-button {
+  margin: 50px 0px;
+  padding: 10px;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(200, 15%, 8%);
+  border: none;
+}
+.countryDetail {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.single-country {
+  color: hsl(200, 15%, 8%);
+}
+.country-name {
+  font-size: 30px;
+  font-weight: 600;
+  color: hsl(200, 15%, 8%);
+}
+.single-country-detail {
+  max-width: 400px;
+}
+.singleCountry-detail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.border-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+.border-name {
+  margin: 0px 10px;
+  height: 24px;
+  border-radius: 6px;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(200, 15%, 8%);
+}

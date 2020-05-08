@@ -1,97 +1,59 @@
-<p>about works!</p>
-
-
-<div>
-    <img src={{detail.flag}} width="360px" height="260px" alt="flag missing" />
-    <!-- jjj -->
-</div>
-<div>
-    <h2>{{detail.name}}</h2>
-    <div>
+<div class="detail-page">
+    <a [routerLink]="['/']">
+        <button class="back-button"> &#x2190; Back</button>
+    </a>
+    <div class="countryDetail">
         <div>
-            <div>
-                <strong>Native Name : </strong>{{detail.nativeName}}
+            <img src={{detail.flag}} width="360px" height="260px" alt="flag missing" />
+        </div>
+        <div class="single-country-detail">
+            <h2>{{detail.name}}</h2>
+            <div class="singleCountry-detail">
+                <div>
+                    <div>
+                        <strong>Native Name : </strong>{{detail.nativeName}}
+                    </div>
+                    <div>
+                        <strong>Population : </strong>{{detail.population}}
+                    </div>
+                    <div>
+                        <strong>Region : </strong>{{detail.region}}
+                    </div>
+                    <div>
+                        <strong>Sub Region : </strong>{{detail.subregion}}
+                    </div>
+                    <div>
+                        <strong>Capital : </strong>{{detail.capital}}
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <strong>Top Level Domain : </strong>{{detail.topLevelDomain}}
+                    </div>
+                    <div>
+                        <strong>Currencies : </strong>
+                        <span *ngFor="let item of detail.currencies">
+                            <span>{{item.name}}</span>
+                        </span>
+                    </div>
+                    <div>
+                        <strong>Languages : </strong>
+                        <span *ngFor="let item of detail.languages">
+                            <span>{{item.name}} </span>
+                        </span>
+                    </div>
+                </div>
             </div>
             <div>
-                <strong>Population : </strong>{{detail.population}}
-            </div>
-            <div>
-                <strong>Region : </strong>{{detail.region}}
-            </div>
-            <div>
-                <strong>Sub Region : </strong>{{detail.subregion}}
-            </div>
-            <div>
-                <strong>Capital : </strong>{{detail.capital}}
-            </div>
-            <div>
-                <strong>Top Level Domain : </strong>{{detail.topLevelDomain}}
-            </div>
-            <div>
-                <strong>Currencies : </strong>
-                <span *ngFor="let item of detail.currencies">
-                    <span>{{item.name}}</span>
-                </span>
-            </div>
-            <div>
-                <strong>Languages : </strong>
-                <span *ngFor="let item of detail.languages">
-                    <span>{{item.name}} </span>
-                </span>
-            </div>
-            <div>
-                <strong>Border Countries : </strong>
-                <div *ngFor="let item of detail.borders">
-                    <a [routerLink]="['/name', item]">
-                        <button (click)="goto($event.target.innerHTML)">{{item}}</button>
-                    </a>
+                <div class="border-details">
+                    <strong>Border Countries : </strong>
+                    <div *ngFor="let item of detail.borders" class="borders">
+                        <a [routerLink]="['/name', item]">
+                            <button class="border-name" (click)="goto($event.target.innerHTML)">{{item}}</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- <div *ngFor="let item of detail"> -->
-<!-- <p>{{item.name}}</p> -->
-<!-- </div> -->
-<!-- <div>{country.name}</div> -->
-<!-- <div class="singleCountry-detail">
-        <div>
-            <div>
-                <strong>Native Name :</strong> country.nativeName
-            </div>
-            <div>
-                <strong> Population:</strong> country.population
-            </div>
-            <div>
-                <strong> Region:</strong> country.region
-            </div>
-            <div>
-                <strong> Sub Region:</strong> country.subregion
-            </div>
-            <div>
-                <strong> Capital:</strong> country.capital
-            </div>
-        </div>
-        <div>
-            <div>
-                <strong>Top Level Domain:</strong>
-                country.topLevelDomain
-            </div>
-            <div> 
- <strong>Currencies: </strong> -->
-<!-- </div> -->
-<!-- <div}> -->
-<!-- <strong>Languages: </strong> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- <div class="border-details"> -->
-<!-- <div> -->
-<!-- <strong>Border Countries:</strong> -->
-<!-- </div> -->
-<!-- <div> -->
-<!-- <div> -->
-<!-- country.border -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->

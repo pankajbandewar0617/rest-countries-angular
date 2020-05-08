@@ -1,0 +1,22 @@
+.all-countries {
+  background-color: hsl(0, 0%, 90%);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.country-style {
+  margin: 20px 0px 20px 40px;
+}
+.country-card {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(200, 15%, 8%);
+}
+.country-name {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 0px 0px 20px;
+}
+.country-detail {
+  font-size: 12px;
+  padding: 0px 0px 10px 20px;
+}
